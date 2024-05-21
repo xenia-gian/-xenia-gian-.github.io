@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Devbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+    <h2>Price Calculator</h2>
+
+<!-- <p>Current set up:</p> -->
+
+<form id ="priceForm">
+<div class="questions">
+  <label for="boiler_price">What is the current boiler type:</label>
+  <select id="boiler_type" name="boiler_type">
+    <option value=""disabled selected hidden></option>
+    <option value="combi">Combi</option>
+    <option value="system">System</option>
+    <option value="regular">Regular</option>
+    <option value="storage">Storage Boiler(Powermax, Heatslave, 111) </option>
+  </select>
+</div>
+
+<div class="questions">
+  <label for="boiler_price">What is the existing boiler power? :</label>
+  <select id="boiler_power" name="boiler_power">
+    <option value=""disabled selected hidden></option>
+    <option value="15">15kw</option>
+    <option value="18">18kw</option>
+    <option value="24">24kw</option>
+    <option value="30">30kw </option>
+    <option value="35">35kw </option>
+  </select>
+</div>
+
+<div class="questions">
+  <label for="boiler_price">Will the boiler be installed in the same location?:</label>
+  <select id="boiler_location" name="boiler_location">
+    <option value=""disabled selected hidden></option>
+    <option value="same_location">Same location</option>
+    <option value="diff_location_same_room">Different location - same room</option>
+    <option value="diff_location_same_floor">Different location - same floor</option>
+    <option value="diff_location_diff">Different location - another floor/room</option>
+  </select>
+</div>
+
+<div class="questions">
+  <label for="boiler_price">Where does the flue exit?:</label>
+  <select id="flue" name="flue">
+    <option value=""disabled selected hidden></option>
+    <option value="wall">Wall</option>
+    <option value="roofPitched">Roof with pitched roof</option>
+    <option value="roofFlat">Roof with flat roof</option>
+  </select>
+</div>
+
+<div class="questions">
+  <label for="boiler_price">Is it a direct replacement?:</label>
+  <select id="replacement_type" name="replacement_type">
+    <option value=""disabled selected hidden></option>
+    <option value="straight_swap">Straight swap</option>
+    <option value="system_swap">System swap to combi</option>
+  </select>
+
+  <!-- <div class="questions" id="bedroomsQuestion" style="display: none;">
+    <label for="bedrooms">How many bedrooms in the property?</label>
+    <select id="bedrooms" name="bedrooms">
+      <option value="" disabled selected hidden></option>
+      <option value="1-2">1-2</option>
+      <option value="3-4">3-4</option>
+      <option value="4+">4+</option>
+    </select>
+  </div> -->
+  
+  <div class="questions" id="bathroomsQuestion" style="display: none;">
+    <label for="bathrooms">How many bathrooms in the property?</label>
+    <select id="bathroom_count" name="bathrooms">
+      <option value="" disabled selected hidden></option>
+      <option value="1">1</option>
+      <option value="2-3">2-3</option>
+      <option value="3+">3+</option>
+    </select>
+  </div>
+  
+  <!-- <div class="questions" id="radiatorsQuestion" style="display: none;">
+    <label for="radiators">How many radiators are in the property?</label>
+    <select id="radiators" name="radiators">
+      <option value="" disabled selected hidden></option>
+      <option value="0-10">0-10</option>
+      <option value="10+">10+</option>
+      <option value="20+">20+</option>
+    </select>
+  </div> -->
+
+
+</div >
+
+<div class="result">
+  <input type="button" id="calculateButton" value="Calculate">
+  <input type="button" id="clearButton" value="Clear">
+</div>
+
+
+<div class="calculation">
+  <span class="output-label">Price:</span>
+  <span id="priceOutput" class="output-price"> </span>
+</div>
+
+<div class="calculation">
+  <span class="output-label-output">Breakdown:</span>
+</div>
+<div class="breakdown">  
+<span id="partsOutput" class="breakdown-price"> </span>
+</div>
+<div class="breakdown">  
+<span id="labourOutput" class="breakdown-price"> </span>
+</div>
+<div class="breakdown"> 
+<span id="vatOutput" class="breakdown-price"> </span>
+</div>
+
+
+</div>
+</form>
+  
+
+    <script src="index.js"></script>
+  </body>
+
+</html>
